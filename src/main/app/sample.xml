@@ -10,6 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="sampleFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/sample" allowedMethods="POST" doc:name="HTTP"/>
         <set-payload value="Hello #[message.payloadAs(java.lang.String)]" doc:name="Set Payload"/>
-        <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="Logger"/>
+        <logger message=" The payload is #[message.payloadAs(java.lang.String)]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
